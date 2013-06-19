@@ -1,0 +1,56 @@
+$benton: 'BentonSans', Helvetica, Arial, sans-serif;
+$clarion: 'Clarion', Georgia, serif;
+$miller: 'MillerDisplay', $clarion;
+
+$sans: $benton !default;
+$serif: $clarion !default;
+
+$font-header: $miller;
+$font-body: $clarion;
+$font-ui: $benton;
+$font-alt: $benton;
+
+// Primary palette
+$ft-lightpink: #FFF9F1 !default;
+$ft-primarypink: #fff1e0 !default;
+$ft-linkblue-text: #2e6e9e !default;
+$ft-linkblue-fill: #4781aa !default;
+$ft-claret-text: #9b164f !default;
+$ft-claret-fill: #9e2f50 !default;
+$ft-skyline: #e3dfca !default;
+$ft-orange: #d66d06 !default;
+$ft-black: #000 !default;
+$ft-white: #fff !default;
+
+// Greys
+$ft-warmgrey1: #a7a59b !default;
+$ft-warmgrey2: #74736c !default;
+$ft-coolgrey1: #777777 !default;
+$ft-coolgrey2: #dfded8 !default;
+$ft-darkgrey: #43423e !default;
+
+// Tints
+$ft-tint1: #f6e9d8 !default;
+$ft-tint2: #e9decf !default;
+$ft-tint3: #cec6b9 !default; // Text only
+
+// "Colours"
+$ft-red: #cc0000 !default;
+$ft-green: #458b00 !default;
+
+$font-black: #000 !default;
+$black: #000;
+
+$ft-redtint1: #b1493f;
+$ft-redtint2: #c36256;
+$ft-redtint3: #c36256;
+$ft-redtint4: #c36256;
+$ft-redtint5: #ebbcb3;
+
+$ft-bluetint1: #ebbcb3;
+$ft-bluetint2: #75a5c2;
+$ft-bluetint3: #8ab5cd;
+$ft-bluetint4: #a9cadc;
+$ft-bluetint5: #bcd7e5;
+
+$ft-hr-rule: 7px solid $ft-tint2;
