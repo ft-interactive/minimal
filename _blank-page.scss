@@ -1,0 +1,38 @@
+@mixin blank-page($alt-font:false){
+  html.#{$m-root-class-name}, body.#{$m-root-class-name}, .#{$m-root-class-name} body{
+    @extend %body-font;
+    background-color: $m-body-bg;
+    font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .#{$m-root-class-name} {
+    h1, h2, h3, h4, h5, h6{
+      @extend %headline-font;
+      color: $m-font-color-header;
+      padding-top: 0;
+    }
+    h1{ @include font-size($m-font-size-h1); @include vertical($m-vertical-h1); }
+    h2{ @include font-size($m-font-size-h2); @include vertical($m-vertical-h2); }
+    h3{ @include font-size($m-font-size-h3); @include vertical($m-vertical-h3); }
+    h4{ @include font-size($m-font-size-h4); @include vertical($m-vertical-h4); }
+    h5{ @include font-size($m-font-size-h5); @include vertical($m-vertical-h5); }
+    h6{ @include font-size($m-font-size-h6); @include vertical($m-vertical-h6); }
+    p{
+      @extend %body-font;
+      color: $m-font-color-body;
+      padding-top: 0;
+      @include vertical($m-vertical-p);
+      @include font-size($m-font-size-body);
+    }
+    label, input, textarea {
+      @extend %alt-font;
+    }
+    a{
+      color: $m-font-color-link;
+      &:hover {
+        color: $m-font-color-link-hover;
+      }
+    }
+  }
+}

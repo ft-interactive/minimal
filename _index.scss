@@ -1,0 +1,56 @@
+@import "ft-scss-fontface/main";
+@import "ft-scss-tools/index";
+@import "var";
+@import "blank-page";
+
+
+@if type-of($m-container-width) == 'string' {
+  .#{$m-root-class-name} {
+    @include normalize(border-box);
+
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+
+    @if $m-container-width == 'flex' {
+      width: 100%;
+    } @else if $m-container-width == 'page' {
+      width: $m-container-width-page;
+    } @else if $m-container-width == 'rail' {
+      width: $m-container-width-rail;
+    } @else if $m-container-width == 'body' {
+      width: $m-container-width-body;
+    } @else if $m-container-width == 'moreon' {
+      width: $m-container-width-moreon;
+    } @else if $m-container-width == 'secondary' {
+      width: $m-container-width-secondary;
+    }
+
+    @if $m-top-border {
+      border-top: $ft-rule-style-thicklight;
+    }
+
+    @if $m-bottom-border {
+      border-bottom: $ft-rule-style-thicklight;
+    }
+  }
+
+
+} @else if type-of($m-container-width) == 'number' {
+  .#{$m-root-class-name} {
+    @include normalize(border-box);
+    width: if(unitless($m-container-width), $m-container-width + 'px', $m-container-width);
+    margin: 0 auto;
+  }
+} @else {
+  @include normalize(border-box);
+}
+
+@if $m-include-trumps {
+  @include trumps($m-namespace);
+}
+
+@if $m-include-blank-page {
+  @include blank-page;
+}
+
